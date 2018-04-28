@@ -164,7 +164,7 @@ public class ToolChallengeTwo {
 
 
     public static void queryOnModel(String s1, String s2){
-        // faire des requète sur un model (s2) à partir d'un fichier (s1)
+        // faire des requètes sur un model (s2) à partir d'un fichier (s1)
 
         Model model = ModelFactory.createDefaultModel() ;
         //model.read("src/main/resources/ex2.ttl", "TURTLE") ;
