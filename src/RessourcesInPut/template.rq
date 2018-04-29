@@ -1,0 +1,5 @@
+PREFIX bio: <http://science.org/biology/terms>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lib: <http://laplaiade.fr/book>
+PREFIX mov: <http://rdf.freebase.com/ns/>
+
