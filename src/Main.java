@@ -10,7 +10,10 @@ public class Main {
     static String queryXML = "D:\\Dropbox\\2017-2018Master2\\Techno_Web\\TP\\InteliJ\\BeautyOne\\src\\output\\outPutMoi.xml";
 
 
-
+    /**
+     * Méthode principale
+     * @param args
+     */
     public static void main(String args[]){
         System.out.println("Hello World");
     }
