@@ -195,7 +195,7 @@ public class ToolChallengeTwo {
         //model.read("src/main/resources/ex2.ttl", "TURTLE") ;
         modelLire.read(path, "TTL");
 
-        modelLire.write(System.out);
+        //modelLire.write(System.out);
 
         return modelLire;
 
