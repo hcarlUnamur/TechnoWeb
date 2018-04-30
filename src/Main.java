@@ -32,10 +32,16 @@ public class Main {
 
         String pathEmployee ="Ontology/Hospital_Employe_Instantie.owl";
         String pathPatient ="Ontology/hopital_patient_Instantie.owl";
+        String pathInsurance = "Ontology/Hopital_Insurance_Instancie.owl";
+        String pathRecord = "Ontology/hopital_record_instantie.owl";
+        String pathFusion = "Ontology/Fusion.owl";
 
 
         Model employeeModel = importmodel(pathEmployee);
         Model patientModel = importmodel(pathPatient);
+        Model insuranceModel = importmodel(pathInsurance);
+        Model recordModel = importmodel(pathRecord);
+        Model fusedModel     = importmodel(pathFusion);
 
         System.out.println("... modèle importé !");
 
@@ -55,7 +61,7 @@ public class Main {
                 // Travail 2 Question 2
                 case "visit" :
                     if (args.length == 3){
-                        countVisitOf(employeeModel, args[2], args[1]);
+                        countVisitOf(recordModel, args[1]);
                     } else {
                         System.out.println("Désolé, nous n'avons pas pu traîter votre requête");
                         System.out.println("Pour obtenir le nombre de visites d'un patient, veillez à bien introduire la commande \"visit\" suivit du prenom et du nom du patient");
@@ -64,7 +70,7 @@ public class Main {
                 // Travail 2 Question 3
                 case "exam" :
                     if (args.length == 3){
-                        whoExamOf(patientModel, args[2], args[1]);
+                        whoExamOf(recordModel, args[1]);
                     } else {
                         System.out.println("Désolé, nous n'avons pas pu traîter votre requête");
                         System.out.println("Pour obtenir les examinateurs du patient, veillez à bien introduire la commande \"exam\" suivit du prenom et du nom du patient");
@@ -73,7 +79,7 @@ public class Main {
                 // Travail 2 Question 4
                 case "illness" :
                     if (args.length == 3){
-                        whichIllness(patientModel, args[2], args[1]);
+                        whichIllness(recordModel, args[1]);
                     } else {
                         System.out.println("Désolé, nous n'avons pas pu traîter votre requête");
                         System.out.println("Pour obtenir la maladie du patient, veillez à bien introduire la commande \"illness\" suivit du prenom et du nom du patient");
@@ -82,7 +88,7 @@ public class Main {
                 // Travail 2 Question 5
                 case "apolicy" :
                     if (args.length == 3){
-                        whichPolicy(patientModel, args[2], args[1]);
+                        whichPolicy(patientModel, args[1]);
                     } else {
                         System.out.println("Désolé, nous n'avons pas pu traîter votre requête");
                         System.out.println("Pour obtenir l'assurance d'un patient, veillez à bien introduire la commande \"apolicy\" suivit du prenom et du nom du patient");
@@ -90,7 +96,7 @@ public class Main {
                     break;
                 // Travail 2 Question 6
                 case "people" :
-                    listPeople(employeeModel);
+                    listPeople(patientModel);
                     break;
                 // Travail 2 Question 7
                 case "ageover" :
@@ -111,13 +117,15 @@ public class Main {
             System.out.println("Veillez à ajouter un paramètre à votre commande." +
                     "\n Les paramètres sont soit : " +
                     "\n \t - employee" +
-                    "\n \t - visit <prénom> <nom>" +
-                    "\n \t - exam <prénom> <nom>" +
-                    "\n \t - illness <prénom> <nom>" +
-                    "\n \t - apolicy <prénom> <nom>" +
+                    "\n \t - visit <valeur ID>" +
+                    "\n \t - exam <valeur ID>" +
+                    "\n \t - illness <valeur ID>" +
+                    "\n \t - apolicy <valeur ID>" +
                     "\n \t - people" +
                     "\n \t - ageover <age>");
         }
+
+        System.out.println("La réponse à la requête est stockée dans le dossier /out.");
 
     }
 
@@ -137,44 +145,41 @@ public class Main {
     public static void listEmployee(Model model){
         System.out.println("Liste des employés du modèle !");
         String request = importRequest(sparql1);
-        ToolChallengeTwo.queryOnModel(model,request, null, null);
-        System.out.println("La réponse à la requête est stockée dans le dossier /out.");
+        ToolChallengeTwo.queryOnModel(model,request, null);
 
     }
 
-    public static void countVisitOf(Model model, String name, String surname){
-        System.out.println("Nombre de visites de " + surname + " " + name);
-        ToolChallengeTwo.queryOnModel(model,sparql2, surname, name);
+    public static void countVisitOf(Model model, String id){
+        System.out.println("Nombre de visites du patient " + id);
+        ToolChallengeTwo.queryOnModel(model,sparql2, id);
+    }
+
+    public static void whoExamOf(Model model, String id){
+        System.out.println("Examinateurs du patient " + id);
+        ToolChallengeTwo.queryOnModel(model,sparql3, id);
+    }
+
+    public static void whichIllness(Model model, String id){
+        System.out.println("Maladie du patient " + id);
+        ToolChallengeTwo.queryOnModel(model,sparql4, id);
 
     }
 
-    public static void whoExamOf(Model model, String name, String surname){
-        System.out.println("Examinateurs de " + surname + " " + name);
-        ToolChallengeTwo.queryOnModel(model,sparql3, surname, name);
-
-    }
-
-    public static void whichIllness(Model model, String name, String surname){
-        System.out.println("Maladie de " + surname + " " + name);
-        ToolChallengeTwo.queryOnModel(model,sparql4, surname, name);
-
-    }
-
-    public static void whichPolicy(Model model, String name, String surname){
-        System.out.println("Assurance de " + surname + " " + name);
-        ToolChallengeTwo.queryOnModel(model,sparql5, surname, name);
+    public static void whichPolicy(Model model, String id){
+        System.out.println("Assurance de " + id);
+        ToolChallengeTwo.queryOnModel(model,sparql5, id);
 
     }
 
     public static void listPeople(Model model){
         System.out.println("Liste des personnes du système");
-        ToolChallengeTwo.queryOnModel(model,sparql6, null, null);
+        ToolChallengeTwo.queryOnModel(model,sparql6, null);
 
     }
 
     public static void listPoepleOver(Model model, int age){
         System.out.println("Personnes âgées de plus de " + age + " ans.");
-        ToolChallengeTwo.queryOnModel(model,sparql7, String.valueOf(age), null);
+        ToolChallengeTwo.queryOnModel(model,sparql7, String.valueOf(age));
 
     }
 

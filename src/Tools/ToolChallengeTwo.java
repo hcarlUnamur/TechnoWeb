@@ -164,7 +164,7 @@ public class ToolChallengeTwo {
     }
 
 
-    public static void queryOnModel(Model model, String qstr, String firstParam, String secondParam){
+    public static void queryOnModel(Model model, String qstr, String param){
         // faire des requètes sur un model (s2) à partir d'un fichier (s1)
 
         /*
@@ -175,13 +175,8 @@ public class ToolChallengeTwo {
         */
 
 
-        if(secondParam!=null){
-            qstr.replaceAll("_surname_", firstParam);
-            qstr.replaceAll("_name_", secondParam);
-        } else {
-            if(firstParam!=null){
-                qstr.replaceAll("_age_", firstParam);
-            }
+        if(param!=null){
+            qstr.replaceAll("_param_", param);
         }
 
 
