@@ -103,12 +103,20 @@ public class Main {
                     }
                     break;
                 default :
-                    System.out.println("Error : Unrecognized argument.");
+                    System.out.println("Désolé, le paramètre n'est pas reconnu...");
                     break;
             }
 
         } else {
-            throw new Exception("Argument Missing");
+            System.out.println("Veillez à ajouter un paramètre à votre commande." +
+                    "\n Les paramètres sont soit : " +
+                    "\n \t - employee" +
+                    "\n \t - visit <prénom> <nom>" +
+                    "\n \t - exam <prénom> <nom>" +
+                    "\n \t - illness <prénom> <nom>" +
+                    "\n \t - apolicy <prénom> <nom>" +
+                    "\n \t - people" +
+                    "\n \t - ageover <age>");
         }
 
     }
@@ -130,6 +138,7 @@ public class Main {
         System.out.println("Liste des employés du modèle !");
         String request = importRequest(sparql1);
         ToolChallengeTwo.queryOnModel(model,request, null, null);
+        System.out.println("La réponse à la requête est stockée dans le dossier /out.");
 
     }
 
