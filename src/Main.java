@@ -20,7 +20,7 @@ public class Main {
     public static void main(String args[]) throws Exception {
         System.out.println("Bonjour, import du modèle...");
 
-        Model model = importmodel();
+        Model model = importmodels();
 
         System.out.println("... modèle importé !");
 
@@ -99,7 +99,7 @@ public class Main {
     }
 
 
-    public static Model importmodel(){
+    public static Model importmodels(){
         String path ="RessourcesInPut/iva_movies.xml";
         return ToolChallengeTwo.lireRDF(path);
     }
