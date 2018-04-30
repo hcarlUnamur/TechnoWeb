@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/carl_/ontologies/2018/3/Hopital_Employe#"
+     xml:base="http://www.semanticweb.org/carl_/ontologies/2018/3/Hopital_Employe"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="http://something.org/hopital_Employe"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#UID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#UID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstname -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstname"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/lastname -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/lastname"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://something.org/hopital_Employe#Administratif -->
+
+    <owl:Class rdf:about="http://something.org/hopital_Employe#Administratif">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Employé"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_Employe#Adolescant -->
+
+    <owl:Class rdf:about="http://something.org/hopital_Employe#Adolescant">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_Employe#Adulte -->
+
+    <owl:Class rdf:about="http://something.org/hopital_Employe#Adulte">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_Employe#Employé -->
+
+    <owl:Class rdf:about="http://something.org/hopital_Employe#Employé"/>
+    
+
+
+    <!-- http://something.org/hopital_Employe#Enfant -->
+
+    <owl:Class rdf:about="http://something.org/hopital_Employe#Enfant">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_Employe#Infirmier -->
+
+    <owl:Class rdf:about="http://something.org/hopital_Employe#Infirmier">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Personnel_medical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_Employe#Medecin -->
+
+    <owl:Class rdf:about="http://something.org/hopital_Employe#Medecin">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Personnel_medical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_Employe#Patient -->
+
+    <owl:Class rdf:about="http://something.org/hopital_Employe#Patient"/>
+    
+
+
+    <!-- http://something.org/hopital_Employe#Personnel_medical -->
+
+    <owl:Class rdf:about="http://something.org/hopital_Employe#Personnel_medical">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Employé"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://something.org/hopital_Employe#EMP-1 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-1">
+        <rdf:type rdf:resource="http://something.org/hopital_Employe#Medecin"/>
+        <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-1</ns:UID>
+        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charless</foaf:firstname>
+        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:lastname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_Employe#EMP-2 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-2">
+        <rdf:type rdf:resource="http://something.org/hopital_Employe#Medecin"/>
+        <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-2</ns:UID>
+        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel</foaf:firstname>
+        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vincent</foaf:lastname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_Employe#EMP-3 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-3">
+        <rdf:type rdf:resource="http://something.org/hopital_Employe#Infirmier"/>
+        <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-3</ns:UID>
+        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antony</foaf:firstname>
+        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Victor</foaf:lastname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_Employe#EMP-4 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-4">
+        <rdf:type rdf:resource="http://something.org/hopital_Employe#Medecin"/>
+        <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-4</ns:UID>
+        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caroline</foaf:firstname>
+        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:lastname>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
