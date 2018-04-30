@@ -10,7 +10,6 @@ PREFIX foafbis:<http://something.org/hopital_patient#foaf:>
 
 SELECT  (count(?p2)as ?NombreDeVisite)
 WHERE {
-    ?p2 <http://something.org/hopital_record#patient-id> _idv_ .
-
+    ?p2 <http://something.org/hopital_record#patient-id> _param_ .
 }
 
