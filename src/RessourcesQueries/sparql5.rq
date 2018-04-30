@@ -8,7 +8,12 @@ PREFIX foafbis:<http://something.org/hopital_patient#foaf:>
 
 
 
-SELECT  (count(?p2)as ?NombreDeVisite)
+SELECT  ?assurancename
 WHERE {
-    ?p2 <http://something.org/hopital_record#patient-id> "idvalue0" .
+    ?p2 	<http://something.org/hopital_patient#foaf:firstName> _param_ .
+    ?p2 <http://something.org/hopital_patient#insuranceID> ?assurance .
+
+    ?ass <http://something.org/hospital_insurance#vcard:UID> ?assurance .
+    ?ass <http://something.org/hospital_insurance#foaf:name> ?assurancename .
+
 }
