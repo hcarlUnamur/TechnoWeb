@@ -189,14 +189,15 @@ public class ToolChallengeTwo {
 
     }
 
-    public static void lireRDF() {
+    public static Model lireRDF(String path) {
 
-        String path ="D:\\Dropbox\\2017-2018Master2\\Techno_Web\\TP\\InteliJ\\TP5\\src\\main\\resources\\iva_movies.xml";
         Model modelLire = ModelFactory.createDefaultModel();
         //model.read("src/main/resources/ex2.ttl", "TURTLE") ;
         modelLire.read(path, "TTL");
 
         modelLire.write(System.out);
+
+        return modelLire;
 
     }
 
