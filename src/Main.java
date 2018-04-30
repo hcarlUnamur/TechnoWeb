@@ -109,6 +109,13 @@ public class Main {
 
         System.out.println("Test d'une requête SPARQL avant de commencer...");
 
+        String requestpath = "D:\\bri_e\\Documents\\GitHub\\TechnoWeb\\src\\RessourcesQueries\\tmp2.rq";
+
+        ToolChallengeTwo.queryOnModel(model, requestpath, null, null);
+
+
+
+
 
         System.out.println("Requête sur le modèle instancié...");
 
@@ -120,7 +127,7 @@ public class Main {
     public static void listEmployee(Model model){
         System.out.println("Liste des employés du modèle !");
 
-        ToolChallengeTwo.queryOnModel(model,sparql1);
+        ToolChallengeTwo.queryOnModel(model,sparql1, null, null);
 
     }
 
@@ -128,7 +135,7 @@ public class Main {
         System.out.println("Nombre de visites de " + surname + " " + name);
 
         //TODO : alterate query
-        ToolChallengeTwo.queryOnModel(model,sparql2);
+        ToolChallengeTwo.queryOnModel(model,sparql2, surname, name);
 
 
     }
@@ -137,7 +144,7 @@ public class Main {
         System.out.println("Examinateurs de " + surname + " " + name);
 
         //TODO : alterate query
-        ToolChallengeTwo.queryOnModel(model,sparql3);
+        ToolChallengeTwo.queryOnModel(model,sparql3, surname, name);
 
     }
 
@@ -146,7 +153,7 @@ public class Main {
 
 
         //TODO : alterate query
-        ToolChallengeTwo.queryOnModel(model,sparql4);
+        ToolChallengeTwo.queryOnModel(model,sparql4, surname, name);
 
     }
 
@@ -155,14 +162,14 @@ public class Main {
 
 
         //TODO : alterate query
-        ToolChallengeTwo.queryOnModel(model,sparql5);
+        ToolChallengeTwo.queryOnModel(model,sparql5, surname, name);
 
     }
 
     public static void listPeople(Model model){
         System.out.println("Liste des personnes du système");
 
-        ToolChallengeTwo.queryOnModel(model,sparql6);
+        ToolChallengeTwo.queryOnModel(model,sparql6, null, null);
 
     }
 
@@ -171,7 +178,7 @@ public class Main {
 
 
         //TODO : alterate query
-        ToolChallengeTwo.queryOnModel(model,sparql7);
+        ToolChallengeTwo.queryOnModel(model,sparql7, "40", null);
 
     }
 
