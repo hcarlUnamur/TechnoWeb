@@ -1,22 +1,30 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/carl_/ontologies/2018/3/Hopital#"
-     xml:base="http://www.semanticweb.org/carl_/ontologies/2018/3/Hopital"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<rdf:RDF xmlns="http://something.org/Fusion#"
+     xml:base="http://something.org/Fusion"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:ns="http://www.w3.org/2006/vcard/ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	 xmlns:hospital_insurance="http://something.org/hospital_insurance#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/">
-    <owl:Ontology rdf:about="http://something.org/hopital_Employe"/>
+     xmlns:hopital_record="http://something.org/hopital_record#"
+     xmlns:vcard="http://something.org/hopital_patient#vcard:"
+     xmlns:hopital_patient="http://something.org/hopital_patient#"
+     xmlns:foaf1="http://something.org/hospital_insurance#foaf:"
+     xmlns:vcard4="http://something.org/hopital_record#vcard:"
+     xmlns:vcard5="http://something.org/hospital_insurance#vcard:"
+     xmlns:foaf3="http://xmlns.com/foaf/0.1/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:foaf2="http://something.org/hopital_record#foaf:"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:hospital_insurance="http://something.org/hospital_insurance#"
+     xmlns:foaf="http://something.org/hopital_patient#foaf:">
+    <owl:Ontology rdf:about="http://something.org/Fusion"/>
     
 
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Data properties
+    // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -24,130 +32,12 @@
     
 
 
-    <!-- http://www.w3.org/2006/vcard/ns#UID -->
+    <!-- http://something.org/hopital_record#has_medicine -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#UID">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/firstname -->
-
-    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstname"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/lastname -->
-
-    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/lastname"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://something.org/hopital_Employe#Administratif -->
-
-    <owl:Class rdf:about="http://something.org/hopital_Employe#Administratif">
-        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Employé"/>
-    </owl:Class>
-    
-
-
-    <!-- http://something.org/hopital_Employe#Employé -->
-
-    <owl:Class rdf:about="http://something.org/hopital_Employe#Employé"/>
-    
-
-
-    <!-- http://something.org/hopital_Employe#Infirmier -->
-
-    <owl:Class rdf:about="http://something.org/hopital_Employe#Infirmier">
-        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Personnel_medical"/>
-    </owl:Class>
-    
-
-
-    <!-- http://something.org/hopital_Employe#Medecin -->
-
-    <owl:Class rdf:about="http://something.org/hopital_Employe#Medecin">
-        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Personnel_medical"/>
-    </owl:Class>
-    
-
-
-    <!-- http://something.org/hopital_Employe#Personnel_medical -->
-
-    <owl:Class rdf:about="http://something.org/hopital_Employe#Personnel_medical">
-        <rdfs:subClassOf rdf:resource="http://something.org/hopital_Employe#Employé"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://something.org/hopital_Employe#EMP-1 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-1">
-        <rdf:type rdf:resource="http://something.org/hopital_Employe#Medecin"/>
-        <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-1</ns:UID>
-        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charless</foaf:firstname>
-        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:lastname>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_Employe#EMP-2 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-2">
-        <rdf:type rdf:resource="http://something.org/hopital_Employe#Medecin"/>
-        <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-2</ns:UID>
-        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel</foaf:firstname>
-        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vincent</foaf:lastname>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_Employe#EMP-3 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-3">
-        <rdf:type rdf:resource="http://something.org/hopital_Employe#Infirmier"/>
-        <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-3</ns:UID>
-        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antony</foaf:firstname>
-        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Victor</foaf:lastname>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_Employe#EMP-4 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-4">
-        <rdf:type rdf:resource="http://something.org/hopital_Employe#Medecin"/>
-        <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-4</ns:UID>
-        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caroline</foaf:firstname>
-        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:lastname>
-    </owl:NamedIndividual>
-	
-	
-	<owl:Ontology rdf:about="http://something.org/hopital_patient"/>
+    <owl:ObjectProperty rdf:about="http://something.org/hopital_record#has_medicine">
+        <rdfs:domain rdf:resource="http://something.org/hopital_record#medical-record"/>
+        <rdfs:range rdf:resource="http://something.org/hopital_record#medicine"/>
+    </owl:ObjectProperty>
     
 
 
@@ -213,149 +103,6 @@
     <owl:DatatypeProperty rdf:about="http://something.org/hopital_patient#vcard:UID">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://something.org/hopital_patient#Adult -->
-
-    <owl:Class rdf:about="http://something.org/hopital_patient#Adult">
-        <rdfs:subClassOf rdf:resource="http://something.org/hopital_patient#Patients"/>
-    </owl:Class>
-    
-
-
-    <!-- http://something.org/hopital_patient#Children -->
-
-    <owl:Class rdf:about="http://something.org/hopital_patient#Children">
-        <rdfs:subClassOf rdf:resource="http://something.org/hopital_patient#Patients"/>
-    </owl:Class>
-    
-
-
-    <!-- http://something.org/hopital_patient#Patients -->
-
-    <owl:Class rdf:about="http://something.org/hopital_patient#Patients"/>
-    
-
-
-    <!-- http://something.org/hopital_patient#Teenager -->
-
-    <owl:Class rdf:about="http://something.org/hopital_patient#Teenager">
-        <rdfs:subClassOf rdf:resource="http://something.org/hopital_patient#Patients"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://something.org/hopital_patient#idValue1 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idValue1">
-        <rdf:type rdf:resource="http://something.org/hopital_patient#Adult"/>
-        <insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DKV-12</insuranceID>
-        <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-12-1981</foaf:dateOfBirth>
-        <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</foaf:firstName>
-        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</foaf:gender>
-        <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles</foaf:lastName>
-        <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">081/778767</foaf:phone>
-        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue1</vcard:UID>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_patient#idvalue0 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idvalue0">
-        <rdf:type rdf:resource="http://something.org/hopital_patient#Adult"/>
-        <insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ING-123</insuranceID>
-        <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-02-1980</foaf:dateOfBirth>
-        <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:firstName>
-        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</foaf:gender>
-        <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xavier</foaf:lastName>
-        <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">081/728767</foaf:phone>
-        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue0</vcard:UID>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_patient#idvalue2 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idvalue2">
-        <rdf:type rdf:resource="http://something.org/hopital_patient#Adult"/>
-        <insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ING-123</insuranceID>
-        <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17-12-1970</foaf:dateOfBirth>
-        <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</foaf:firstName>
-        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</foaf:gender>
-        <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alex</foaf:lastName>
-        <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">082/728767</foaf:phone>
-        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue2</vcard:UID>
-    </owl:NamedIndividual>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<owl:Ontology rdf:about="http://something.org/hopital_record"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://something.org/hopital_record#has_medicine -->
-
-    <owl:ObjectProperty rdf:about="http://something.org/hopital_record#has_medicine">
-        <rdfs:domain rdf:resource="http://something.org/hopital_record#medical-record"/>
-        <rdfs:range rdf:resource="http://something.org/hopital_record#medicine"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
@@ -458,162 +205,33 @@
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://something.org/hospital_insurance#option -->
 
+    <owl:DatatypeProperty rdf:about="http://something.org/hospital_insurance#option"/>
     
 
 
-    <!-- http://something.org/hopital_record#medical-record -->
+    <!-- http://something.org/hospital_insurance#phone -->
 
-    <owl:Class rdf:about="http://something.org/hopital_record#medical-record">
-        <rdfs:subClassOf rdf:resource="http://something.org/hopital_record#record"/>
-    </owl:Class>
+    <owl:DatatypeProperty rdf:about="http://something.org/hospital_insurance#phone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
     
 
 
-    <!-- http://something.org/hopital_record#medicine -->
+    <!-- http://something.org/hospital_insurance#foaf:name -->
 
-    <owl:Class rdf:about="http://something.org/hopital_record#medicine">
-        <rdfs:subClassOf rdf:resource="http://something.org/hopital_record#record"/>
-    </owl:Class>
+    <owl:DatatypeProperty rdf:about="http://something.org/hospital_insurance#foaf:name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
     
 
 
-    <!-- http://something.org/hopital_record#record -->
+    <!-- http://something.org/hospital_insurance#vcard:UID -->
 
-    <owl:Class rdf:about="http://something.org/hopital_record#record"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://something.org/hopital_record#Rec1 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#Rec1">
-        <rdf:type rdf:resource="http://something.org/hopital_record#medical-record"/>
-        <has_medicine rdf:resource="http://something.org/hopital_record#med-6"/>
-        <has_medicine rdf:resource="http://something.org/hopital_record#med-7"/>
-        <has_medicine rdf:resource="http://something.org/hopital_record#med-8"/>
-        <arriving-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-02-1999</arriving-date>
-        <disease-recognition-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22-02-1999</disease-recognition-date>
-        <employee-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-1</employee-id>
-        <medical-data-acquisition-method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood test</medical-data-acquisition-method>
-        <patient-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue0</patient-id>
-        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-02-1999</release-date>
-        <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malaria</type>
-        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rec1</vcard:UID>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_record#Rec4 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#Rec4">
-        <rdf:type rdf:resource="http://something.org/hopital_record#medical-record"/>
-        <has_medicine rdf:resource="http://something.org/hopital_record#med-5"/>
-        <has_medicine rdf:resource="http://something.org/hopital_record#med-7"/>
-        <has_medicine rdf:resource="http://something.org/hopital_record#med-8"/>
-        <arriving-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-02-2009</arriving-date>
-        <disease-recognition-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-02-2009</disease-recognition-date>
-        <employee-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-3</employee-id>
-        <medical-data-acquisition-method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood test</medical-data-acquisition-method>
-        <patient-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue1</patient-id>
-        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27-05-2009</release-date>
-        <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skin cancer</type>
-        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rec4</vcard:UID>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_record#med-5 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#med-5">
-        <miligram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500</miligram>
-        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrea</foaf:name>
-        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">med-5</vcard:UID>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_record#med-6 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#med-6">
-        <miligram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">250</miligram>
-        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paracetamol</foaf:name>
-        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">med-6</vcard:UID>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_record#med-7 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#med-7">
-        <miligram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300</miligram>
-        <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&gt;2</foaf:age>
-        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspirin</foaf:name>
-        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">med-7</vcard:UID>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://something.org/hopital_record#med-8 -->
-
-    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#med-8">
-        <miligram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300</miligram>
-        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panadol</foaf:name>
-        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">med-8</vcard:UID>
-    </owl:NamedIndividual>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<owl:Ontology rdf:about="http://something.org/hopital_Employe"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
+    <owl:DatatypeProperty rdf:about="http://something.org/hospital_insurance#vcard:UID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -686,6 +304,64 @@
     
 
 
+    <!-- http://something.org/hopital_patient#Adult -->
+
+    <owl:Class rdf:about="http://something.org/hopital_patient#Adult">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_patient#Patients"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_patient#Children -->
+
+    <owl:Class rdf:about="http://something.org/hopital_patient#Children">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_patient#Patients"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_patient#Patients -->
+
+    <owl:Class rdf:about="http://something.org/hopital_patient#Patients"/>
+    
+
+
+    <!-- http://something.org/hopital_patient#Teenager -->
+
+    <owl:Class rdf:about="http://something.org/hopital_patient#Teenager">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_patient#Patients"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_record#medical-record -->
+
+    <owl:Class rdf:about="http://something.org/hopital_record#medical-record">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_record#record"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_record#medicine -->
+
+    <owl:Class rdf:about="http://something.org/hopital_record#medicine">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_record#record"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_record#record -->
+
+    <owl:Class rdf:about="http://something.org/hopital_record#record"/>
+    
+
+
+    <!-- http://something.org/hospital_insurance#insurance -->
+
+    <owl:Class rdf:about="http://something.org/hospital_insurance#insurance"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -702,8 +378,8 @@
     <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-1">
         <rdf:type rdf:resource="http://something.org/hopital_Employe#Medecin"/>
         <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-1</ns:UID>
-        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charless</foaf:firstname>
-        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:lastname>
+        <foaf3:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charless</foaf3:firstname>
+        <foaf3:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf3:lastname>
     </owl:NamedIndividual>
     
 
@@ -713,8 +389,8 @@
     <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-2">
         <rdf:type rdf:resource="http://something.org/hopital_Employe#Medecin"/>
         <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-2</ns:UID>
-        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel</foaf:firstname>
-        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vincent</foaf:lastname>
+        <foaf3:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel</foaf3:firstname>
+        <foaf3:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vincent</foaf3:lastname>
     </owl:NamedIndividual>
     
 
@@ -724,8 +400,8 @@
     <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-3">
         <rdf:type rdf:resource="http://something.org/hopital_Employe#Infirmier"/>
         <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-3</ns:UID>
-        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antony</foaf:firstname>
-        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Victor</foaf:lastname>
+        <foaf3:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antony</foaf3:firstname>
+        <foaf3:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Victor</foaf3:lastname>
     </owl:NamedIndividual>
     
 
@@ -735,12 +411,162 @@
     <owl:NamedIndividual rdf:about="http://something.org/hopital_Employe#EMP-4">
         <rdf:type rdf:resource="http://something.org/hopital_Employe#Medecin"/>
         <ns:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-4</ns:UID>
-        <foaf:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caroline</foaf:firstname>
-        <foaf:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:lastname>
+        <foaf3:firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caroline</foaf3:firstname>
+        <foaf3:lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf3:lastname>
     </owl:NamedIndividual>
-	
-	
-	
+    
+
+
+    <!-- http://something.org/hopital_patient#idValue1 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idValue1">
+        <rdf:type rdf:resource="http://something.org/hopital_patient#Adult"/>
+        <hopital_patient:insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DKV-12</hopital_patient:insuranceID>
+        <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-12-1981</foaf:dateOfBirth>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</foaf:firstName>
+        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</foaf:gender>
+        <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles</foaf:lastName>
+        <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">081/778767</foaf:phone>
+        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue1</vcard:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_patient#idvalue0 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idvalue0">
+        <rdf:type rdf:resource="http://something.org/hopital_patient#Adult"/>
+        <hopital_patient:insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ING-123</hopital_patient:insuranceID>
+        <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-02-1980</foaf:dateOfBirth>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:firstName>
+        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</foaf:gender>
+        <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xavier</foaf:lastName>
+        <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">081/728767</foaf:phone>
+        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue0</vcard:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_patient#idvalue2 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idvalue2">
+        <rdf:type rdf:resource="http://something.org/hopital_patient#Adult"/>
+        <hopital_patient:insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ING-123</hopital_patient:insuranceID>
+        <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17-12-1970</foaf:dateOfBirth>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</foaf:firstName>
+        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</foaf:gender>
+        <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alex</foaf:lastName>
+        <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">082/728767</foaf:phone>
+        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue2</vcard:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_record#Rec1 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#Rec1">
+        <rdf:type rdf:resource="http://something.org/hopital_record#medical-record"/>
+        <hopital_record:has_medicine rdf:resource="http://something.org/hopital_record#med-6"/>
+        <hopital_record:has_medicine rdf:resource="http://something.org/hopital_record#med-7"/>
+        <hopital_record:has_medicine rdf:resource="http://something.org/hopital_record#med-8"/>
+        <hopital_record:arriving-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-02-1999</hopital_record:arriving-date>
+        <hopital_record:disease-recognition-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22-02-1999</hopital_record:disease-recognition-date>
+        <hopital_record:employee-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-1</hopital_record:employee-id>
+        <hopital_record:medical-data-acquisition-method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood test</hopital_record:medical-data-acquisition-method>
+        <hopital_record:patient-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue0</hopital_record:patient-id>
+        <hopital_record:release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-02-1999</hopital_record:release-date>
+        <hopital_record:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malaria</hopital_record:type>
+        <vcard4:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rec1</vcard4:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_record#Rec4 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#Rec4">
+        <rdf:type rdf:resource="http://something.org/hopital_record#medical-record"/>
+        <hopital_record:has_medicine rdf:resource="http://something.org/hopital_record#med-5"/>
+        <hopital_record:has_medicine rdf:resource="http://something.org/hopital_record#med-7"/>
+        <hopital_record:has_medicine rdf:resource="http://something.org/hopital_record#med-8"/>
+        <hopital_record:arriving-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-02-2009</hopital_record:arriving-date>
+        <hopital_record:disease-recognition-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-02-2009</hopital_record:disease-recognition-date>
+        <hopital_record:employee-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-3</hopital_record:employee-id>
+        <hopital_record:medical-data-acquisition-method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood test</hopital_record:medical-data-acquisition-method>
+        <hopital_record:patient-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue1</hopital_record:patient-id>
+        <hopital_record:release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27-05-2009</hopital_record:release-date>
+        <hopital_record:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skin cancer</hopital_record:type>
+        <vcard4:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rec4</vcard4:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_record#med-5 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#med-5">
+        <hopital_record:miligram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500</hopital_record:miligram>
+        <foaf2:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrea</foaf2:name>
+        <vcard4:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">med-5</vcard4:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_record#med-6 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#med-6">
+        <hopital_record:miligram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">250</hopital_record:miligram>
+        <foaf2:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paracetamol</foaf2:name>
+        <vcard4:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">med-6</vcard4:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_record#med-7 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#med-7">
+        <hopital_record:miligram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300</hopital_record:miligram>
+        <foaf2:age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&gt;2</foaf2:age>
+        <foaf2:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspirin</foaf2:name>
+        <vcard4:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">med-7</vcard4:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_record#med-8 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#med-8">
+        <hopital_record:miligram rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300</hopital_record:miligram>
+        <foaf2:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panadol</foaf2:name>
+        <vcard4:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">med-8</vcard4:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hospital_insurance#DKV-12 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hospital_insurance#DKV-12">
+        <rdf:type rdf:resource="http://something.org/hospital_insurance#insurance"/>
+        <hospital_insurance:option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auto Insurance</hospital_insurance:option>
+        <hospital_insurance:option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dental insurances</hospital_insurance:option>
+        <hospital_insurance:option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travel insurances</hospital_insurance:option>
+        <hospital_insurance:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">081/724967</hospital_insurance:phone>
+        <foaf1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DKV Belgium Insurance</foaf1:name>
+        <vcard5:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DKV-12</vcard5:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hospital_insurance#ING-123 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hospital_insurance#ING-123">
+        <rdf:type rdf:resource="http://something.org/hospital_insurance#insurance"/>
+        <hospital_insurance:option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auto Insurance</hospital_insurance:option>
+        <hospital_insurance:option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Insurance</hospital_insurance:option>
+        <hospital_insurance:option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maternity coverage</hospital_insurance:option>
+        <hospital_insurance:option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travel Insurances</hospital_insurance:option>
+        <hospital_insurance:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">081/724967</hospital_insurance:phone>
+        <foaf1:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ING Insurance</foaf1:name>
+        <vcard5:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ING-123</vcard5:UID>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
