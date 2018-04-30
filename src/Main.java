@@ -9,9 +9,13 @@ public class Main {
     static String foaf = "http://xmlns.com/foaf/0.1/";
 
     // Fichiers & Query
-    static String queryfile = "D:\\Dropbox\\2017-2018Master2\\Techno_Web\\TP\\InteliJ\\BeautyOne\\src\\main\\resources\\test.rq";
-    static String queryXML = "C:\\Users\\Alpaga\\Documents\\Challenge2\\src\\RessourcesInPut\\iva_movies.xml";
-
+    static String sparql1 = "RessourcesQueries/sparql1.rq";
+    static String sparql2 = "RessourcesQueries/sparql2.rq";
+    static String sparql3 = "RessourcesQueries/sparql3.rq";
+    static String sparql4 = "RessourcesQueries/sparql4.rq";
+    static String sparql5 = "RessourcesQueries/sparql5.rq";
+    static String sparql6 = "RessourcesQueries/sparql6.rq";
+    static String sparql7 = "RessourcesQueries/sparql7.rq";
 
     /**
      * Méthode principale
@@ -100,7 +104,7 @@ public class Main {
 
 
     public static Model importmodels(){
-        String path ="Ontology/Hopital_Employe.owl";
+        String path ="Ontology/Hospital_Employe_Instantie.owl";
         Model model =  ToolChallengeTwo.lireRDF(path);
 
         System.out.println("Test d'une requête SPARQL avant de commencer...");
