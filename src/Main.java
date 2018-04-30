@@ -100,7 +100,7 @@ public class Main {
 
 
     public static Model importmodels(){
-        String path ="RessourcesInPut/iva_movies.xml";
+        String path ="RessourcesOntologies/Hopital_Employe.owl";
         return ToolChallengeTwo.lireRDF(path);
     }
 
