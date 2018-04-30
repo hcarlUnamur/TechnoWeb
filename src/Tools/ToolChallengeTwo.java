@@ -163,7 +163,7 @@ public class ToolChallengeTwo {
     }
 
 
-    public static void queryOnModel(Model model, String s1){
+    public static void queryOnModel(Model model, String s1, String firstParam, String secondParam){
         // faire des requètes sur un model (s2) à partir d'un fichier (s1)
 
         /*
@@ -184,12 +184,28 @@ public class ToolChallengeTwo {
             e.printStackTrace();
         }
 
+        if(secondParam!=null){
+            qstr.replaceAll("_surname_", firstParam);
+            qstr.replaceAll("_name_", secondParam);
+        } else {
+            if(firstParam!=null){
+                qstr.replaceAll("_age_", firstParam);
+            }
+        }
+
+
+
+
         Query q = QueryFactory.create(qstr);
+
+
+
 
         QueryExecution qexec = QueryExecutionFactory.create(q, model);
 
         ResultSet results = qexec.execSelect();
         ResultSetFormatter.out(System.out, results, q);
+
 
     }
 

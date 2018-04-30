@@ -119,32 +119,63 @@ public class Main {
 
     public static void listEmployee(Model model){
         System.out.println("Liste des employés du modèle !");
+
+        ToolChallengeTwo.queryOnModel(model,sparql1);
+
     }
 
     public static void countVisitOf(Model model, String name, String surname){
         System.out.println("Nombre de visites de " + surname + " " + name);
 
+        //TODO : alterate query
+        ToolChallengeTwo.queryOnModel(model,sparql2);
+
+
     }
 
     public static void whoExamOf(Model model, String name, String surname){
         System.out.println("Examinateurs de " + surname + " " + name);
+
+        //TODO : alterate query
+        ToolChallengeTwo.queryOnModel(model,sparql3);
+
     }
 
     public static void whichIllness(Model model, String name, String surname){
         System.out.println("Maladie de " + surname + " " + name);
+
+
+        //TODO : alterate query
+        ToolChallengeTwo.queryOnModel(model,sparql4);
+
     }
 
     public static void whichPolicy(Model model, String name, String surname){
         System.out.println("Assurance de " + surname + " " + name);
+
+
+        //TODO : alterate query
+        ToolChallengeTwo.queryOnModel(model,sparql5);
+
     }
 
     public static void listPeople(Model model){
         System.out.println("Liste des personnes du système");
+
+        ToolChallengeTwo.queryOnModel(model,sparql6);
+
     }
 
     public static void listPoepleOver(Model model, int age){
         System.out.println("Personnes âgées de plus de " + age + " ans.");
+
+
+        //TODO : alterate query
+        ToolChallengeTwo.queryOnModel(model,sparql7);
+
     }
+
+
 
 
 }
