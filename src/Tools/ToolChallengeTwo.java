@@ -163,7 +163,7 @@ public class ToolChallengeTwo {
     }
 
 
-    public static void queryOnModel(Model model, String s1, String firstParam, String secondParam){
+    public static void queryOnModel(Model model, String qstr, String firstParam, String secondParam){
         // faire des requètes sur un model (s2) à partir d'un fichier (s1)
 
         /*
@@ -173,16 +173,6 @@ public class ToolChallengeTwo {
         model.read(s2, "RDFXML") ;
         */
 
-
-        String qstr = null;
-        try {
-            qstr = new String(
-                    Files.readAllBytes(Paths.get((s1))),
-                    Charset.defaultCharset()
-            );
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         if(secondParam!=null){
             qstr.replaceAll("_surname_", firstParam);
@@ -220,5 +210,7 @@ public class ToolChallengeTwo {
         return modelLire;
 
     }
+
+
 
 }
