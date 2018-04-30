@@ -1,5 +1,6 @@
 package Tools;
 
+import org.apache.jena.atlas.lib.Timer;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.sparql.vocabulary.FOAF;
@@ -184,11 +185,7 @@ public class ToolChallengeTwo {
         }
 
 
-
-
         Query q = QueryFactory.create(qstr);
-
-
 
 
         QueryExecution qexec = QueryExecutionFactory.create(q, model);
@@ -196,6 +193,16 @@ public class ToolChallengeTwo {
         ResultSet results = qexec.execSelect();
         ResultSetFormatter.out(System.out, results, q);
 
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter("./out/query" + System.currentTimeMillis() + ".xml", "UTF-8");
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        model.write(writer);
+        if (writer != null) {
+            writer.close();
+        }
 
     }
 
