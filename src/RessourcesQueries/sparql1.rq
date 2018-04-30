@@ -7,7 +7,7 @@ PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 
 
 
-SELECT ?subject ?p2
+SELECT (?subject as ?Employés)
 	WHERE { ?p0 rdfs:subClassOf <http://something.org/hopital_Employe#Employé> .
 	        ?p1 rdfs:subClassOf ?p0 .
 	        ?p2 rdf:type ?p1 .
