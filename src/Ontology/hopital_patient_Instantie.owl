@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://something.org/hopital_patient#"
+     xml:base="http://something.org/hopital_patient"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vcard="http://something.org/hopital_patient#vcard:"
+     xmlns:foaf="http://something.org/hopital_patient#foaf:">
+    <owl:Ontology rdf:about="http://something.org/hopital_patient"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://something.org/hopital_patient#insuranceID -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_patient#insuranceID"/>
+    
+
+
+    <!-- http://something.org/hopital_patient#foaf:dateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_patient#foaf:dateOfBirth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_patient#foaf:firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_patient#foaf:firstName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_patient#foaf:gender -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_patient#foaf:gender">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_patient#foaf:lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_patient#foaf:lastName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_patient#foaf:phone -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_patient#foaf:phone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_patient#vcard:UID -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_patient#vcard:UID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://something.org/hopital_patient#Adult -->
+
+    <owl:Class rdf:about="http://something.org/hopital_patient#Adult">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_patient#Patients"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_patient#Children -->
+
+    <owl:Class rdf:about="http://something.org/hopital_patient#Children">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_patient#Patients"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_patient#Patients -->
+
+    <owl:Class rdf:about="http://something.org/hopital_patient#Patients"/>
+    
+
+
+    <!-- http://something.org/hopital_patient#Teenager -->
+
+    <owl:Class rdf:about="http://something.org/hopital_patient#Teenager">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_patient#Patients"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://something.org/hopital_patient#idValue1 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idValue1">
+        <insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DKV-12</insuranceID>
+        <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-12-1981</foaf:dateOfBirth>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</foaf:firstName>
+        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</foaf:gender>
+        <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles</foaf:lastName>
+        <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">081/778767</foaf:phone>
+        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue1</vcard:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_patient#idvalue0 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idvalue0">
+        <insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ING-123</insuranceID>
+        <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-02-1980</foaf:dateOfBirth>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:firstName>
+        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</foaf:gender>
+        <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xavier</foaf:lastName>
+        <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">081/728767</foaf:phone>
+        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue0</vcard:UID>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

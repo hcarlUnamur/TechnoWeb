@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1525076505208" name="duplicate:http://something.org/hopital_patient" uri="hopital_patient.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1525076505208" name="duplicate:http://something.org/hopital_patient" uri="hopital_patient_Instantie.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1525076505208" name="http://something.org/hopital_record" uri="hopital_record.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1525076505208" name="duplicate:http://www.semanticweb.org/carl_/ontologies/2018/3/Hopital_Employe" uri="Hopital_Employe.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1525076505208" name="duplicate:http://www.semanticweb.org/carl_/ontologies/2018/3/Hopital_Employe" uri="Hospital_Employe_Instantie.owl"/>
+    </group>
+</catalog>

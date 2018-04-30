@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://something.org/hopital_record#"
+     xml:base="http://something.org/hopital_record"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://something.org/hopital_record"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://something.org/hopital_record#arriving-date -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#arriving-date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#disease-recognition-date -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#disease-recognition-date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#employee-id -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#employee-id">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#is_medical_report -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#is_medical_report">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#is_medicine -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#is_medicine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#medical-data-acquisition-method -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#medical-data-acquisition-method">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#miligram -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#miligram">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#patient-id -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#patient-id">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#release-date -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#release-date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#side-effects -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#side-effects">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#type -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#foaf:age -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#foaf:age">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#foaf:name -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#foaf:name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://something.org/hopital_record#vcard:UID -->
+
+    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#vcard:UID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://something.org/hopital_record#report -->
+
+    <owl:Class rdf:about="http://something.org/hopital_record#report"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
