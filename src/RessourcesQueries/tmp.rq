@@ -14,11 +14,3 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX : <http://www.snee.com/ns/demo#>
 PREFIX hop:<http://something.org/>
 
-
-SELECT (SUM(?p)as Alice)
-WHERE {
-    ?emp foaf:firstName "Alice Charles" .
-
-
-}
-
