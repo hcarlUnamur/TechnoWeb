@@ -10,7 +10,7 @@ public class Main {
 
     // Fichiers & Query
     static String queryfile = "D:\\Dropbox\\2017-2018Master2\\Techno_Web\\TP\\InteliJ\\BeautyOne\\src\\main\\resources\\test.rq";
-    static String queryXML = "D:\\Dropbox\\2017-2018Master2\\Techno_Web\\TP\\InteliJ\\BeautyOne\\src\\output\\outPutMoi.xml";
+    static String queryXML = "C:\\Users\\Alpaga\\Documents\\Challenge2\\src\\RessourcesInPut\\iva_movies.xml";
 
 
     /**
@@ -95,7 +95,7 @@ public class Main {
 
 
     public static Model importmodel(){
-        String path ="D:\\Dropbox\\Carl_Is_Back\\Code_TP\\TP5\\src\\main\\java\\TP5_1.xml";
+        String path ="C:\\Users\\Alpaga\\Documents\\Challenge2\\src\\RessourcesInPut\\iva_movies.xml";
         return ToolChallengeTwo.lireRDF(path);
     }
 
