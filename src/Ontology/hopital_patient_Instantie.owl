@@ -132,6 +132,7 @@
     <!-- http://something.org/hopital_patient#idValue1 -->
 
     <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idValue1">
+        <rdf:type rdf:resource="http://something.org/hopital_patient#Adult"/>
         <insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DKV-12</insuranceID>
         <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-12-1981</foaf:dateOfBirth>
         <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</foaf:firstName>
@@ -146,6 +147,7 @@
     <!-- http://something.org/hopital_patient#idvalue0 -->
 
     <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idvalue0">
+        <rdf:type rdf:resource="http://something.org/hopital_patient#Adult"/>
         <insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ING-123</insuranceID>
         <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-02-1980</foaf:dateOfBirth>
         <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</foaf:firstName>
@@ -153,6 +155,21 @@
         <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xavier</foaf:lastName>
         <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">081/728767</foaf:phone>
         <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue0</vcard:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_patient#idvalue2 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_patient#idvalue2">
+        <rdf:type rdf:resource="http://something.org/hopital_patient#Adult"/>
+        <insuranceID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ING-123</insuranceID>
+        <foaf:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17-12-1970</foaf:dateOfBirth>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</foaf:firstName>
+        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</foaf:gender>
+        <foaf:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alex</foaf:lastName>
+        <foaf:phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">082/728767</foaf:phone>
+        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue2</vcard:UID>
     </owl:NamedIndividual>
 </rdf:RDF>
 

@@ -5,8 +5,29 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vcard="http://something.org/hopital_record#vcard:">
     <owl:Ontology rdf:about="http://something.org/hopital_record"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://something.org/hopital_record#has_medicine -->
+
+    <owl:ObjectProperty rdf:about="http://something.org/hopital_record#has_medicine">
+        <rdfs:domain rdf:resource="http://something.org/hopital_record#medical-record"/>
+        <rdfs:range rdf:resource="http://something.org/hopital_record#medicine"/>
+    </owl:ObjectProperty>
     
 
 
@@ -45,22 +66,6 @@
     
 
 
-    <!-- http://something.org/hopital_record#is_medical_report -->
-
-    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#is_medical_report">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://something.org/hopital_record#is_medicine -->
-
-    <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#is_medicine">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://something.org/hopital_record#medical-data-acquisition-method -->
 
     <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#medical-data-acquisition-method">
@@ -73,6 +78,7 @@
 
     <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#miligram">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://something.org/hopital_record#medicine"/>
     </owl:DatatypeProperty>
     
 
@@ -113,6 +119,7 @@
 
     <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#foaf:age">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://something.org/hopital_record#medicine"/>
     </owl:DatatypeProperty>
     
 
@@ -121,6 +128,7 @@
 
     <owl:DatatypeProperty rdf:about="http://something.org/hopital_record#foaf:name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://something.org/hopital_record#medicine"/>
     </owl:DatatypeProperty>
     
 
@@ -144,9 +152,73 @@
     
 
 
-    <!-- http://something.org/hopital_record#report -->
+    <!-- http://something.org/hopital_record#medical-record -->
 
-    <owl:Class rdf:about="http://something.org/hopital_record#report"/>
+    <owl:Class rdf:about="http://something.org/hopital_record#medical-record">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_record#record"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_record#medicine -->
+
+    <owl:Class rdf:about="http://something.org/hopital_record#medicine">
+        <rdfs:subClassOf rdf:resource="http://something.org/hopital_record#record"/>
+    </owl:Class>
+    
+
+
+    <!-- http://something.org/hopital_record#record -->
+
+    <owl:Class rdf:about="http://something.org/hopital_record#record"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://something.org/hopital_record#Rec1 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#Rec1">
+        <rdf:type rdf:resource="http://something.org/hopital_record#medical-record"/>
+        <arriving-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-02-1999</arriving-date>
+        <disease-recognition-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22-02-1999</disease-recognition-date>
+        <employee-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-1</employee-id>
+        <medical-data-acquisition-method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood test</medical-data-acquisition-method>
+        <patient-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue0</patient-id>
+        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-02-1999</release-date>
+        <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malaria</type>
+        <vcard:UID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rec1</vcard:UID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_record#Rec4 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#Rec4">
+        <rdf:type rdf:resource="http://something.org/hopital_record#medical-record"/>
+        <arriving-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-02-2009</arriving-date>
+        <disease-recognition-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-02-2009</disease-recognition-date>
+        <employee-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMP-3</employee-id>
+        <medical-data-acquisition-method rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood test</medical-data-acquisition-method>
+        <patient-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idvalue1</patient-id>
+        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27-05-2009</release-date>
+        <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skin cancer</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://something.org/hopital_record#med7 -->
+
+    <owl:NamedIndividual rdf:about="http://something.org/hopital_record#med7"/>
 </rdf:RDF>
 
 
