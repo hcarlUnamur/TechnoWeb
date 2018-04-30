@@ -105,7 +105,7 @@ public class ToolChallengeTwo {
     }
 
     public static void writeModel(Model model){
-        model.write(System.out, "RDF/XML");
+        model.write(System.out, "TTL");
 
         PrintWriter writer = null;
         try {

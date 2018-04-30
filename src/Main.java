@@ -100,8 +100,17 @@ public class Main {
 
 
     public static Model importmodels(){
-        String path ="RessourcesOntologies/Hopital_Employe.owl";
-        return ToolChallengeTwo.lireRDF(path);
+        String path ="Ontology/Hopital_Employe.owl";
+        Model model =  ToolChallengeTwo.lireRDF(path);
+
+        System.out.println("Test d'une requête SPARQL avant de commencer...");
+
+
+        System.out.println("Requête sur le modèle instancié...");
+
+        System.out.println("Requête réussie ! ");
+
+        return model;
     }
 
     public static void listEmployee(Model model){
