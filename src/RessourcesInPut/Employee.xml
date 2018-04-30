@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "Employee.dtd" >
+<employees>
+	<employee employeeID="EMP-1">
+		<firstName>Charless</firstName>
+		<lastName>Henry</lastName>
+		<position>Doctor</position>
+	</employee>
+	<employee employeeID="EMP-2">
+		<firstName>Daniel</firstName>
+		<lastName>Vincent</lastName>
+		<position>Doctor</position>
+	</employee>
+	<employee employeeID="EMP-3">
+		<firstName>Antony</firstName>
+		<lastName>Victor</lastName>
+		<position>Nurse</position>
+	</employee>
+	<employee employeeID="EMP-4">
+		<firstName>Caroline</firstName>
+		<lastName>Henry</lastName>
+		<position>Doctor</position>
+	</employee>
+</employees>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT insurances (insurance)*>
+<!ELEMENT insurance (name, coverage, phone)>
+<!ATTLIST insurance id ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT coverage (options)+>
+<!ELEMENT options (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+  

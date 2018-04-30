@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT records (medical-record|medicine)*>
+<!ELEMENT medical-record (patient-id, employee-id, arriving-date, release-date, medical-data-acquisition-method, disease-recognition-date, type)>
+<!ATTLIST medical-record record-id ID #REQUIRED medicine-id IDREFS #REQUIRED>
+<!ELEMENT patient-id (#PCDATA)>
+<!ELEMENT employee-id (#PCDATA)>
+<!ELEMENT arriving-date (#PCDATA)>
+<!ELEMENT release-date (#PCDATA)>
+<!ELEMENT medical-data-acquisition-method (#PCDATA)>
+<!ELEMENT disease-recognition-date (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT medicine (name, miligram, age, side-effects)>
+<!ATTLIST medicine medicine-id ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT miligram (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT side-effects (#PCDATA)>
+   

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE insurances SYSTEM "insurance.dtd" >
+<insurances>
+	<insurance id="ING-123">
+		<name>ING Insurance</name>
+		<coverage>
+			<options>Maternity coverage</options>
+			<options>Auto Insurance</options>
+			<options>Business Insurance</options>
+			<options>Travel Insurances</options>
+		</coverage>
+		<phone>081/724967</phone>
+	</insurance>
+	<insurance id="FRTS-11">
+		<name>Fortis AG Insurance</name>
+		<coverage>
+			<options>Maternity coverage</options>
+			<options>Auto Insurance</options>
+			<options>Business Insurance</options>
+			<options>Travel Insurances</options>
+		</coverage>
+		<phone>081/724967</phone>
+	</insurance>
+	<insurance id="AGF-20">
+		<name>AGF Belgium Insurance</name>
+		<coverage>
+			<options>Maternity coverage</options>
+			<options>Student health insurance</options>
+		</coverage>
+		<phone>081/724967</phone>
+	</insurance>
+	<insurance id="DKV-12">
+		<name>DKV Belgium Insurance</name>
+		<coverage>
+			<options>Auto Insurance</options>
+			<options>Dental insurances</options>
+			<options>Travel insurances</options>
+		</coverage>
+		<phone>081/724967</phone>
+	</insurance>
+</insurances>

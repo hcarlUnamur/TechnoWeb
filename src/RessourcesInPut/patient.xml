@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE patient SYSTEM "patient.dtd" >
+<patients>
+	<patient id="idvalue0">
+		<firstName>Henry</firstName>
+		<lastName>Xavier</lastName>
+		<gender>M</gender>
+		<phone>081/728767</phone>
+		<dateOfBirth>19-02-1980</dateOfBirth>
+		<insuranceID>ING-123</insuranceID>
+	</patient>
+	<patient id="idvalue1" >
+		<firstName>Alice</firstName>
+		<lastName>Charles</lastName>
+		<gender>M</gender>
+		<phone>081/778767</phone>
+		<dateOfBirth>19-12-1981</dateOfBirth>
+		<insuranceID>DKV-12</insuranceID>
+	</patient>
+	<patient id="idvalue2">
+		<firstName>David</firstName>
+		<lastName>Alex</lastName>
+		<gender>M</gender>
+		<phone>082/728767</phone>
+		<dateOfBirth>17-12-1970</dateOfBirth>
+		<insuranceID>ING-123</insuranceID>
+	</patient>
+	<patient id="idvalue3">
+		<firstName>Alice</firstName>
+		<lastName>Xavier</lastName>
+		<gender>F</gender>
+		<phone> 021/728767</phone>
+		<dateOfBirth>19-08-1980</dateOfBirth>
+		<insuranceID>DKV-12</insuranceID>
+	</patient>
+	<patient id="idvalue4">
+		<firstName>Henry</firstName>
+		<lastName>Wolf</lastName>
+		<gender>M</gender>
+		<phone>021/828767</phone>
+		<dateOfBirth>19-08-1980</dateOfBirth>
+		<insuranceID>AGF-20</insuranceID>
+	</patient>
+
+	<patient id="idvalue5">
+		<firstName>Henry</firstName>
+		<lastName>Tom</lastName>
+		<gender>M</gender>
+		<phone> 081/208767</phone>
+		<dateOfBirth>25-08-1999</dateOfBirth>
+		<insuranceID>AGF-20</insuranceID>
+	</patient>
+	<patient id="idvalue6">
+		<firstName>Amato</firstName>
+		<lastName>Beaufort</lastName>
+		<gender>M</gender>
+		<phone>081/654767</phone>
+		<dateOfBirth>19-08-1980</dateOfBirth>
+		<insuranceID>AGF-20</insuranceID>
+	</patient>
+	<patient id="idvalue7">
+		<firstName>Afrodille</firstName>
+		<lastName>Berger</lastName>
+		<gender>F</gender>
+		<phone> 081/728767</phone>
+		<dateOfBirth>19-12-2011</dateOfBirth>
+		<insuranceID>ING-123</insuranceID>
+	</patient>
+	<patient id="idvalue8">
+		<firstName>Agrican</firstName>
+		<lastName>Amou</lastName>
+		<gender>M</gender>
+		<phone> 081/928767</phone>
+		<dateOfBirth>01-02-2012</dateOfBirth>
+		<insuranceID>ING-123</insuranceID>
+	</patient>
+	<patient id="idvalue9">
+		<firstName>Berk</firstName>
+		<lastName>Burel</lastName>
+		<gender>M</gender>
+		<phone> 081/2728767</phone>
+		<dateOfBirth>01-02-2012</dateOfBirth>
+		<insuranceID>ING-123</insuranceID>
+	</patient>
+	<patient id="idvalue10">
+		<firstName>Abella</firstName>
+		<lastName>Amoux</lastName>
+		<gender>F</gender>
+		<phone> 077/728767</phone>
+		<dateOfBirth>25-02-2000</dateOfBirth>
+		<insuranceID>FRTS-11</insuranceID>
+	</patient>
+	<patient id="idvalue11">
+		<firstName>Chandelle</firstName>
+		<lastName>Beals</lastName>
+		<gender>F</gender>
+		<phone> 081/728767</phone>
+		<dateOfBirth>01-02-2009</dateOfBirth>
+		<insuranceID>ING-123</insuranceID>
+	</patient>
+	<patient id="idvalue12">
+		<firstName>Chantilly</firstName>
+		<lastName>Xavier</lastName>
+		<gender>M</gender>
+		<phone> 081/728767</phone>
+		<dateOfBirth>19-02-2011</dateOfBirth>
+		<insuranceID>FRTS-11</insuranceID>
+	</patient>
+</patients>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT patients (patient)*>
+<!ELEMENT patient (firstName, lastName, gender, phone, dateOfBirth, insuranceID)>
+<!ATTLIST patient id ID #REQUIRED>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT dateOfBirth (#PCDATA)>
+<!ELEMENT insuranceID (#PCDATA)>
